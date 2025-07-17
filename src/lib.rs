@@ -1,5 +1,8 @@
 #![deny(clippy::all)]
 
+#[global_allocator]
+static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+
 use napi_derive::napi;
 
 #[napi]
